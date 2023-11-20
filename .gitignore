@@ -4,3 +4,4 @@ __pycache__/read_csv.cpython-311.pyc
 data_files
 output.csv
 
+.~lock.output.csv\#
