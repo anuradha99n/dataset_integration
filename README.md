@@ -11,11 +11,28 @@ I created a simple python program to do this boring work.
 ## How it works
 1. Read the dataset files one by one which stored in "data_files" folder
 2. Create a python dictionary for the data(Protein name:value)
-3. Then create an array with the dataset_ID
-4. Write Dictionary data to the new CSV file one by one in following structure [Data_ID,{Protein names}]
+3. Get BPD stages from the GEO database using web scraping
+4. Then create an array with the Sample_ID, Protein data values and BPD stages
+5. Write Dictionary data to the new CSV file one by one in following structure [Data_ID,{Protein names},BPD_stage]
 
 ## How to Run
 1. Clone the repo to your Computer
-2. create a folder named "data_files" and copy all your dataset files.
-3. If your dataset file extension is not ".txt" do the necessary changes in "process_files.py"
-4. Run "main.py" file.
+2. ### Create Virtual Environment
+    ```
+        $ python3 -m venv venv
+    ```
+    Activate Virtual Environment
+    ```
+        $ source venv/bin/activate
+    ```
+3. Install Requests library on venv
+    ```
+    (venv) $ python -m pip install requests
+    ```
+4. Install Beautiful Soup on venv
+    ```
+    (venv) $ python -m pip install beautifulsoup4
+    ```
+5. create a folder named "data_files" and copy all your dataset files.
+6. If your dataset file extension is not ".txt" do the necessary changes in "process_files.py"
+7. Run "main.py" file.
