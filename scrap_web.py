@@ -6,7 +6,6 @@ import requests
 from bs4 import BeautifulSoup
 
 def scrap_data(sample_id):
-    stage_dict = {}
     base_link = "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc="
     URL = base_link + sample_id
     page = requests.get(URL)
