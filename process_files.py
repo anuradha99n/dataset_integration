@@ -1,5 +1,6 @@
 import os
 from read_csv import read_text_file
+from scrap_web import scrap_data
 
 def process_files_in_folder(folder_path):
     files_and_data = []
@@ -11,6 +12,7 @@ def process_files_in_folder(folder_path):
             data_dict = read_text_file(file_path)
             if data_dict == 0:
                 continue
-            data_id = filename.split('-')[0] 
-            files_and_data.append((data_id, data_dict))
+            sample_id = filename.split('-')[0] 
+            bpd_stage = scrap_data(sample_id) # Scrap bpd stages from the site
+            files_and_data.append((sample_id, data_dict, bpd_stage))
     return files_and_data
