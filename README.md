@@ -19,19 +19,19 @@ I created a simple python program to do this boring work.
 1. Clone the repo to your Computer
 2. ### Create Virtual Environment
     ```
-        $ python3 -m venv venv
+    python3 -m venv venv
     ```
     Activate Virtual Environment
     ```
-        $ source venv/bin/activate
+    source venv/bin/activate
     ```
 3. Install Requests library on venv
     ```
-    (venv) $ python -m pip install requests
+    python -m pip install requests
     ```
 4. Install Beautiful Soup on venv
     ```
-    (venv) $ python -m pip install beautifulsoup4
+    python -m pip install beautifulsoup4
     ```
 5. create a folder named "data_files" and copy all your dataset files.
 6. If your dataset file extension is not ".txt" do the necessary changes in "process_files.py"
